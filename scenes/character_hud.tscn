@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://dnb4oujood5oe"]
+
+[ext_resource type="Script" uid="uid://d2xyayhgue5nm" path="res://scripts/character_hud.gd" id="1_kjwh4"]
+[ext_resource type="Texture2D" uid="uid://bxf273oy1urv" path="res://images/ui_art/Frame.png" id="1_qivji"]
+[ext_resource type="Texture2D" uid="uid://bpndvuh3dbnmj" path="res://images/ui_art/Character_icon.png" id="3_8k56c"]
+[ext_resource type="Texture2D" uid="uid://clp2q6osdvdc1" path="res://images/ui_art/gold.png" id="4_yu7dd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kjwh4"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.4509804)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1loey"]
+texture = ExtResource("4_yu7dd")
+
+[node name="CharacterHud" type="Node2D" unique_id=1181757093]
+script = ExtResource("1_kjwh4")
+
+[node name="Frame" type="TextureRect" parent="." unique_id=960150510]
+offset_right = 1921.0
+offset_bottom = 1080.0
+texture = ExtResource("1_qivji")
+
+[node name="NameLabel" type="Label" parent="." unique_id=1136882187]
+layout_direction = 2
+offset_left = 157.0
+offset_top = 95.0
+offset_right = 210.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0.021434637, 0.021434635, 0.021434633, 1)
+
+[node name="HPNumberLabel" type="Label" parent="." unique_id=675628448]
+offset_left = 307.0
+offset_top = 115.0
+offset_right = 350.0
+offset_bottom = 138.0
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=424004772]
+offset_left = 286.0
+offset_top = 86.0
+offset_right = 447.0
+offset_bottom = 113.0
+
+[node name="XPLabel" type="Label" parent="." unique_id=938709453]
+offset_left = 1374.0
+offset_top = 111.0
+offset_right = 1414.0
+offset_bottom = 134.0
+
+[node name="CharacterPanel" type="Panel" parent="." unique_id=1853051627]
+offset_left = 1754.0
+offset_top = 108.0
+offset_right = 1794.0
+offset_bottom = 148.0
+tooltip_text = "Open Character Screen"
+theme_override_styles/panel = SubResource("StyleBoxFlat_kjwh4")
+
+[node name="Character_Icon" type="Sprite2D" parent="CharacterPanel" unique_id=1322240685]
+position = Vector2(19.999998, 19.999998)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("3_8k56c")
+
+[node name="GoldPanel" type="Panel" parent="." unique_id=1263597665]
+offset_left = 1618.0
+offset_top = 108.0
+offset_right = 1658.0
+offset_bottom = 148.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_1loey")
+
+[node name="GoldLabel" type="Label" parent="GoldPanel" unique_id=709280327]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 2.0
+offset_right = 78.0
+offset_bottom = 25.0

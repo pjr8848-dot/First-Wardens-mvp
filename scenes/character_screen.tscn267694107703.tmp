@@ -1,0 +1,411 @@
+[gd_scene format=3 uid="uid://cfojwpfion8nv"]
+
+[ext_resource type="Script" uid="uid://15cxtb3srisq" path="res://scripts/character_screen.gd" id="1_27evy"]
+[ext_resource type="Texture2D" uid="uid://bxf273oy1urv" path="res://images/Frame.png" id="2_3g3ke"]
+[ext_resource type="Texture2D" uid="uid://o2he25kt1akg" path="res://images/Character_Screen.png" id="3_jn388"]
+[ext_resource type="Texture2D" uid="uid://dh8qm2ahnyq1n" path="res://images/exit.png" id="4_unpfo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ufvw"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.4509804)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_27evy"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="CharacterScreen" type="PopupPanel" unique_id=151373910]
+oversampling_override = 1.0
+size = Vector2i(1920, 1080)
+visible = true
+script = ExtResource("1_27evy")
+
+[node name="character_frame" type="Sprite2D" parent="." unique_id=786145522]
+position = Vector2(994.99994, 541)
+scale = Vector2(1.4366438, 1.2321428)
+texture = ExtResource("2_3g3ke")
+
+[node name="character_background" type="Sprite2D" parent="character_frame" unique_id=948958622]
+position = Vector2(2.436305, -2.0290136)
+scale = Vector2(0.8809596, 0.8048947)
+texture = ExtResource("3_jn388")
+
+[node name="exit" type="Panel" parent="character_frame/character_background" unique_id=959895375]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 601.67883
+offset_top = -466.34955
+offset_right = 651.67883
+offset_bottom = -416.34955
+tooltip_text = "Exit this menu"
+theme_override_styles/panel = SubResource("StyleBoxFlat_2ufvw")
+
+[node name="exit_icon" type="Sprite2D" parent="character_frame/character_background/exit" unique_id=1513303484]
+position = Vector2(25.02462, 26.472479)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("4_unpfo")
+flip_v = true
+
+[node name="exit_label" type="Label" parent="character_frame/character_background/exit" unique_id=142414727]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 54.87
+offset_right = 48.0
+offset_bottom = 77.869995
+theme_override_colors/font_color = Color(0.9779369, 0.97793704, 0.9779369, 1)
+text = "Exit"
+
+[node name="portrait_texture" type="TextureRect" parent="character_frame/character_background" unique_id=1062501199]
+anchors_preset = -1
+anchor_left = 0.086
+anchor_top = 0.09900001
+anchor_right = 0.086
+anchor_bottom = 0.09900001
+offset_left = -650.94635
+offset_top = -472.66064
+offset_right = -355.44012
+offset_bottom = -13.873421
+expand_mode = 1
+
+[node name="AttributesPanel" type="VBoxContainer" parent="character_frame/character_background" unique_id=1089892656]
+offset_left = -529.7778
+offset_top = 143.68616
+offset_right = -271.4074
+offset_bottom = 382.6588
+
+[node name="Attributes" type="Label" parent="character_frame/character_background/AttributesPanel" unique_id=334677540]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+theme_override_font_sizes/font_size = 24
+text = "Attributes"
+horizontal_alignment = 1
+
+[node name="Health" type="Label" parent="character_frame/character_background/AttributesPanel" unique_id=661825507]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+text = "Health: XX/YY"
+
+[node name="Strength" type="Label" parent="character_frame/character_background/AttributesPanel" unique_id=406589011]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+text = "Strength: X"
+
+[node name="Defense" type="Label" parent="character_frame/character_background/AttributesPanel" unique_id=618454963]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+text = "Defense: X"
+
+[node name="Speed" type="Label" parent="character_frame/character_background/AttributesPanel" unique_id=934107415]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00069389754, 0.00069389766, 0.0006938976, 1)
+text = "Speed: X"
+
+[node name="XPBar" type="ProgressBar" parent="character_frame/character_background/AttributesPanel" unique_id=1740620517]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="XPLabel" type="Label" parent="character_frame/character_background/AttributesPanel" unique_id=914637412]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+text = "XP: XX/YY"
+horizontal_alignment = 1
+
+[node name="Gold" type="Label" parent="character_frame/character_background/AttributesPanel" unique_id=2052156916]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+text = "Gold: XXX"
+
+[node name="AbilitiesPanel" type="HBoxContainer" parent="character_frame/character_background" unique_id=898761040]
+offset_left = 26.469
+offset_top = -46.887
+offset_right = 506.469
+offset_bottom = 363.113
+
+[node name="LeftColumn" type="VBoxContainer" parent="character_frame/character_background/AbilitiesPanel" unique_id=1807821049]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Ability1Name" type="Label" parent="character_frame/character_background/AbilitiesPanel/LeftColumn" unique_id=280817154]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 22
+text = "ABILITY 1 NAME"
+
+[node name="Ability1Text" type="Label" parent="character_frame/character_background/AbilitiesPanel/LeftColumn" unique_id=1979443530]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 14
+text = "LOREM IPSOM LOREM IPSOM LOREM IPSOM 
+LOREM IPSOM
+"
+autowrap_mode = 3
+
+[node name="Ability2Name" type="Label" parent="character_frame/character_background/AbilitiesPanel/LeftColumn" unique_id=1887732759]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 22
+text = "ABILITY 2 NAME"
+
+[node name="Ability2Text" type="Label" parent="character_frame/character_background/AbilitiesPanel/LeftColumn" unique_id=961165404]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 14
+text = "LOREM IPSOM LOREM
+ IPSOM LOREM IPSOM 
+LOREM IPSOM
+"
+autowrap_mode = 3
+
+[node name="Ability3Name" type="Label" parent="character_frame/character_background/AbilitiesPanel/LeftColumn" unique_id=1550135977]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 22
+text = "ABILITY 3 NAME"
+
+[node name="Ability3Text" type="Label" parent="character_frame/character_background/AbilitiesPanel/LeftColumn" unique_id=479990178]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 14
+text = "LOREM IPSOM LOREM
+ IPSOM LOREM IPSOM 
+LOREM IPSOM"
+autowrap_mode = 3
+
+[node name="RightColumn" type="VBoxContainer" parent="character_frame/character_background/AbilitiesPanel" unique_id=1214405877]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Ability4Name" type="Label" parent="character_frame/character_background/AbilitiesPanel/RightColumn" unique_id=1207393802]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 22
+text = "ABILITY 4 NAME"
+
+[node name="Ability4Text" type="Label" parent="character_frame/character_background/AbilitiesPanel/RightColumn" unique_id=1445864290]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 14
+text = "LOREM IPSOM LOREM
+ IPSOM LOREM IPSOM 
+LOREM IPSOM
+"
+autowrap_mode = 3
+
+[node name="Ability5Name" type="Label" parent="character_frame/character_background/AbilitiesPanel/RightColumn" unique_id=2078897788]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 22
+text = "ABILITY 5 NAME"
+
+[node name="Ability5Text" type="Label" parent="character_frame/character_background/AbilitiesPanel/RightColumn" unique_id=971150799]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 14
+text = "LOREM IPSOM LOREM
+ IPSOM LOREM IPSOM 
+LOREM IPSOM
+"
+autowrap_mode = 3
+
+[node name="Ability6Name" type="Label" parent="character_frame/character_background/AbilitiesPanel/RightColumn" unique_id=1417007530]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 22
+text = "ABILITY 6 NAME"
+
+[node name="Ability6Text" type="Label" parent="character_frame/character_background/AbilitiesPanel/RightColumn" unique_id=2121130438]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 14
+text = "LOREM IPSOM LOREM
+ IPSOM LOREM IPSOM 
+LOREM IPSOM"
+autowrap_mode = 3
+
+[node name="InventoryPanel" type="VBoxContainer" parent="character_frame/character_background" unique_id=724442884]
+offset_left = -200.29639
+offset_top = -396.77527
+offset_right = 545.58014
+offset_bottom = -90.91675
+theme_override_constants/separation = 39
+
+[node name="Inv_Row1" type="HBoxContainer" parent="character_frame/character_background/InventoryPanel" unique_id=1294224226]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="Item1" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row1" unique_id=947386764]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item2" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row1" unique_id=787611233]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item3" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row1" unique_id=862283170]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item4" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row1" unique_id=416354620]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item5" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row1" unique_id=1578157833]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item6" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row1" unique_id=1738834493]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item7" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row1" unique_id=425327275]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item8" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row1" unique_id=1213514608]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Inv_Row2" type="HBoxContainer" parent="character_frame/character_background/InventoryPanel" unique_id=571743949]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="Item9" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row2" unique_id=345985493]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item10" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row2" unique_id=282828424]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item11" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row2" unique_id=90198986]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item12" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row2" unique_id=801861272]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item13" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row2" unique_id=924331749]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item14" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row2" unique_id=523357125]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item15" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row2" unique_id=707862968]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item16" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row2" unique_id=1500137964]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Inv_Row3" type="HBoxContainer" parent="character_frame/character_background/InventoryPanel" unique_id=2061988068]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="Item17" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row3" unique_id=1620140902]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item18" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row3" unique_id=337852985]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item19" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row3" unique_id=641434307]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item20" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row3" unique_id=1253439171]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item21" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row3" unique_id=613442867]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item22" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row3" unique_id=786036048]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item23" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row3" unique_id=545679732]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Item24" type="Panel" parent="character_frame/character_background/InventoryPanel/Inv_Row3" unique_id=1329805416]
+custom_minimum_size = Vector2(70, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="EquippedPanel" type="VBoxContainer" parent="character_frame/character_background" unique_id=1397155606]
+custom_minimum_size = Vector2(70, 0)
+offset_left = -172.642
+offset_top = -28.0
+offset_right = -102.642
+offset_bottom = 369.0
+theme_override_constants/separation = 39
+
+[node name="Equipped1" type="Panel" parent="character_frame/character_background/EquippedPanel" unique_id=1816307972]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Equipped2" type="Panel" parent="character_frame/character_background/EquippedPanel" unique_id=178420829]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Equipped3" type="Panel" parent="character_frame/character_background/EquippedPanel" unique_id=1234314134]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")
+
+[node name="Equipped4" type="Panel" parent="character_frame/character_background/EquippedPanel" unique_id=1580704367]
+custom_minimum_size = Vector2(0, 70)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_27evy")

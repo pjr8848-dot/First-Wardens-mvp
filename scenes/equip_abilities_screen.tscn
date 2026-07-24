@@ -1,0 +1,361 @@
+[gd_scene format=3 uid="uid://cy1l4mchggfx4"]
+
+[ext_resource type="Texture2D" uid="uid://bxf273oy1urv" path="res://images/ui_art/Frame.png" id="1_1a4yt"]
+[ext_resource type="Script" uid="uid://ctdvaxq2flsr5" path="res://scripts/equip_abilities_screen.gd" id="1_nkmxn"]
+[ext_resource type="Texture2D" uid="uid://c1cspor3cxyfg" path="res://images/ui_art/ability_select_left.png" id="2_ore1n"]
+[ext_resource type="Texture2D" uid="uid://vgv1rrqqj8ft" path="res://images/ui_art/ability_select_right.png" id="3_nkmxn"]
+[ext_resource type="Texture2D" uid="uid://dh8qm2ahnyq1n" path="res://images/ui_art/exit.png" id="4_ore1n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nkmxn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkmxn"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.5686275)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="EquipAbilitiesScreen" type="PopupPanel" unique_id=2110301296]
+oversampling_override = 1.0
+size = Vector2i(1920, 1080)
+visible = true
+script = ExtResource("1_nkmxn")
+
+[node name="AbilityFrame" type="Sprite2D" parent="." unique_id=675732006]
+position = Vector2(954.5, 537)
+scale = Vector2(1.4648973, 1.2142857)
+texture = ExtResource("1_1a4yt")
+
+[node name="ABS_Left" type="Sprite2D" parent="AbilityFrame" unique_id=1119058394]
+position = Vector2(-143.69609, 2.7205772)
+scale = Vector2(1.1282423, 0.87442714)
+texture = ExtResource("2_ore1n")
+
+[node name="ABS_Right" type="Sprite2D" parent="AbilityFrame" unique_id=1394204295]
+position = Vector2(420.16592, 2.4706006)
+scale = Vector2(0.6810279, 0.87653065)
+texture = ExtResource("3_nkmxn")
+
+[node name="Abilities_Known_Label" type="Label" parent="AbilityFrame" unique_id=1764648489]
+offset_left = -233.12215
+offset_top = -228.11765
+offset_right = -24.122147
+offset_bottom = -189.11765
+theme_override_colors/font_color = Color(0.0253638, 0.0253638, 0.025363795, 1)
+theme_override_font_sizes/font_size = 28
+text = "Abilities Known:"
+
+[node name="Abilities_Known_Panel" type="HBoxContainer" parent="AbilityFrame" unique_id=665233594]
+offset_left = -382.6207
+offset_top = -187.76471
+offset_right = 157.3793
+offset_bottom = 222.23529
+theme_override_constants/separation = 10
+
+[node name="Column1" type="VBoxContainer" parent="AbilityFrame/Abilities_Known_Panel" unique_id=1901485100]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Known1" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=311557138]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 1"
+
+[node name="Known2" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=1343695431]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 2"
+
+[node name="Known3" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=1722453138]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 3"
+
+[node name="Known4" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=2114069794]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 4"
+
+[node name="Known5" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=127716134]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 5"
+
+[node name="Known6" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=960520592]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 6"
+
+[node name="Known7" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=1658081705]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 7"
+
+[node name="Known8" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=614156450]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 8"
+
+[node name="Known9" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=1161762174]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 9"
+
+[node name="Known10" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column1" unique_id=1555476625]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 10"
+
+[node name="Column2" type="VBoxContainer" parent="AbilityFrame/Abilities_Known_Panel" unique_id=1825041146]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Known11" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=980889632]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 11"
+
+[node name="Known12" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=1951039675]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 12"
+
+[node name="Known13" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=1118582321]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 13"
+
+[node name="Known14" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=667677924]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 14"
+
+[node name="Known15" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=292392352]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 15"
+
+[node name="Known16" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=562133630]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 16"
+
+[node name="Known17" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=678634056]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 17"
+
+[node name="Known18" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=67023612]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 18"
+
+[node name="Known19" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=1431431388]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 19"
+
+[node name="Known20" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column2" unique_id=871265929]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 20"
+
+[node name="Column3" type="VBoxContainer" parent="AbilityFrame/Abilities_Known_Panel" unique_id=200444054]
+custom_minimum_size = Vector2(170, 0)
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="Known21" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=1221943812]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 21"
+
+[node name="Known22" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=2144673359]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 22"
+
+[node name="Known23" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=1424292841]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 23"
+
+[node name="Known24" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=514432]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 24"
+
+[node name="Known25" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=1486824176]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 25"
+
+[node name="Known26" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=790996249]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 26"
+
+[node name="Known27" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=1782465755]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 27"
+
+[node name="Known28" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=1672601277]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 28"
+
+[node name="Known29" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=1448235870]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 29"
+
+[node name="Known30" type="Label" parent="AbilityFrame/Abilities_Known_Panel/Column3" unique_id=1888898237]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "ABILITY 30"
+
+[node name="Abilities_Known_Label2" type="Label" parent="AbilityFrame" unique_id=745038379]
+offset_left = 340.97955
+offset_top = -289.05884
+offset_right = 501.97955
+offset_bottom = -263.05884
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 18
+text = "Abilities Equipped:"
+
+[node name="Abilities_Equipped_Panel" type="VBoxContainer" parent="AbilityFrame" unique_id=79416043]
+offset_left = 355.99762
+offset_top = -231.41176
+offset_right = 487.7475
+offset_bottom = 265.17645
+theme_override_constants/separation = 60
+
+[node name="Equipped1" type="Label" parent="AbilityFrame/Abilities_Equipped_Panel" unique_id=1763695725]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nkmxn")
+text = "Ability 1"
+horizontal_alignment = 1
+
+[node name="Equipped2" type="Label" parent="AbilityFrame/Abilities_Equipped_Panel" unique_id=1556180319]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+text = "Ability 2"
+horizontal_alignment = 1
+
+[node name="Equipped3" type="Label" parent="AbilityFrame/Abilities_Equipped_Panel" unique_id=373689263]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+text = "Ability 3"
+horizontal_alignment = 1
+
+[node name="Equipped4" type="Label" parent="AbilityFrame/Abilities_Equipped_Panel" unique_id=1486622710]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+text = "Ability 4"
+horizontal_alignment = 1
+
+[node name="Equipped5" type="Label" parent="AbilityFrame/Abilities_Equipped_Panel" unique_id=526298985]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+text = "Ability 5"
+horizontal_alignment = 1
+
+[node name="Equipped6" type="Label" parent="AbilityFrame/Abilities_Equipped_Panel" unique_id=1023485107]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+text = "Ability 6"
+horizontal_alignment = 1
+
+[node name="Exit" type="Panel" parent="AbilityFrame" unique_id=553252159]
+custom_minimum_size = Vector2(50, 50)
+offset_left = 517.7837
+offset_top = -363.1765
+offset_right = 567.7837
+offset_bottom = -313.1765
+scale = Vector2(0.8, 0.8)
+theme_override_styles/panel = SubResource("StyleBoxFlat_nkmxn")
+
+[node name="exit_icon" type="Sprite2D" parent="AbilityFrame/Exit" unique_id=2082998135]
+position = Vector2(25.599064, 24.70588)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("4_ore1n")
+flip_v = true
+
+[node name="exit_label" type="Label" parent="AbilityFrame/Exit" unique_id=513796033]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 50.0
+offset_right = 45.0
+offset_bottom = 73.0
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+text = "Exit"

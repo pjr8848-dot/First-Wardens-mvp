@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://d3ks432q7slrr"]
+
+[ext_resource type="Script" uid="uid://cest21s40a1qd" path="res://scripts/map_screen.gd" id="1_3lmvi"]
+[ext_resource type="Texture2D" uid="uid://dv4t6hjwwagei" path="res://images/ui_art/map.png" id="2_bphxi"]
+[ext_resource type="PackedScene" uid="uid://dnb4oujood5oe" path="res://scenes/character_hud.tscn" id="3_bphxi"]
+
+[node name="MapScreen" type="Node2D" unique_id=799695035]
+position = Vector2(0, 8)
+script = ExtResource("1_3lmvi")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1370730515]
+position = Vector2(957.5, 531.50006)
+scale = Vector2(1.5924999, 1.5678468)
+texture = ExtResource("2_bphxi")
+
+[node name="CharacterHud" parent="." unique_id=1181757093 instance=ExtResource("3_bphxi")]
+position = Vector2(-3, -6)

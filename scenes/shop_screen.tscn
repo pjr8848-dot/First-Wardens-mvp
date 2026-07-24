@@ -1,0 +1,547 @@
+[gd_scene format=3 uid="uid://caoccsxhmwgk0"]
+
+[ext_resource type="Script" uid="uid://dgt7n0j65jtvr" path="res://scripts/shop_screen.gd" id="1_jbbiy"]
+[ext_resource type="Texture2D" uid="uid://kh6k8kpxdcqh" path="res://images/background_art/shop.png" id="1_neyh7"]
+[ext_resource type="Texture2D" uid="uid://dh8qm2ahnyq1n" path="res://images/ui_art/exit.png" id="2_jbbiy"]
+[ext_resource type="Texture2D" uid="uid://c7vrs1cngp6di" path="res://images/ui_art/woodbutton.png" id="3_nrk2k"]
+[ext_resource type="Texture2D" uid="uid://6pa08bdvra0o" path="res://images/ui_art/sell.png" id="4_rutho"]
+[ext_resource type="Texture2D" uid="uid://clp2q6osdvdc1" path="res://images/ui_art/gold.png" id="6_nrk2k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t4u6q"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.4509804)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l06h2"]
+texture = ExtResource("3_nrk2k")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rutho"]
+texture = ExtResource("6_nrk2k")
+
+[node name="ShopScreen" type="Node2D" unique_id=982345473]
+script = ExtResource("1_jbbiy")
+
+[node name="shop_background" type="Sprite2D" parent="." unique_id=390707820]
+position = Vector2(958, 537.5)
+scale = Vector2(1.2486979, 1.0517578)
+texture = ExtResource("1_neyh7")
+
+[node name="consumables1" type="Panel" parent="shop_background" unique_id=1876963797]
+custom_minimum_size = Vector2(60, 60)
+offset_left = -445.0
+offset_top = -260.0
+offset_right = -385.0
+offset_bottom = -200.0
+
+[node name="consumables1_label" type="Label" parent="shop_background/consumables1" unique_id=588265551]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.008500225, 0.008297587, 0.006723451, 1)
+
+[node name="consumables2" type="Panel" parent="shop_background" unique_id=1100479153]
+custom_minimum_size = Vector2(60, 60)
+offset_left = -225.0
+offset_top = -260.0
+offset_right = -165.0
+offset_bottom = -200.0
+
+[node name="consumables2_label" type="Label" parent="shop_background/consumables2" unique_id=469558714]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.008500225, 0.008297587, 0.006723451, 1)
+
+[node name="consumables3" type="Panel" parent="shop_background" unique_id=1219269306]
+custom_minimum_size = Vector2(60, 60)
+offset_left = -10.0
+offset_top = -260.0
+offset_right = 50.0
+offset_bottom = -200.0
+
+[node name="consumables3_label" type="Label" parent="shop_background/consumables3" unique_id=1096118118]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.008500225, 0.008297587, 0.006723451, 1)
+
+[node name="consumables4" type="Panel" parent="shop_background" unique_id=995495521]
+custom_minimum_size = Vector2(60, 60)
+offset_left = 205.0
+offset_top = -260.0
+offset_right = 265.0
+offset_bottom = -200.0
+
+[node name="consumables4_label" type="Label" parent="shop_background/consumables4" unique_id=1879919989]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.008500225, 0.008297587, 0.006723451, 1)
+
+[node name="consumables5" type="Panel" parent="shop_background" unique_id=293939488]
+custom_minimum_size = Vector2(60, 60)
+offset_left = 425.0
+offset_top = -260.0
+offset_right = 485.0
+offset_bottom = -200.0
+
+[node name="consumables5_label" type="Label" parent="shop_background/consumables5" unique_id=1887597614]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.008500225, 0.008297587, 0.006723451, 1)
+
+[node name="equippable1" type="Panel" parent="shop_background" unique_id=687229598]
+custom_minimum_size = Vector2(60, 60)
+offset_left = -230.0
+offset_top = 65.0
+offset_right = -170.0
+offset_bottom = 125.0
+
+[node name="equippable1_label" type="Label" parent="shop_background/equippable1" unique_id=1016780785]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.008500225, 0.008297587, 0.006723451, 1)
+
+[node name="equippable2" type="Panel" parent="shop_background" unique_id=254226004]
+custom_minimum_size = Vector2(60, 60)
+offset_left = -20.0
+offset_top = 70.0
+offset_right = 40.0
+offset_bottom = 130.0
+
+[node name="equippable2_label" type="Label" parent="shop_background/equippable2" unique_id=1113040537]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.008500225, 0.008297587, 0.006723451, 1)
+
+[node name="equippable3" type="Panel" parent="shop_background" unique_id=255920277]
+custom_minimum_size = Vector2(60, 60)
+offset_left = 200.0
+offset_top = 65.0
+offset_right = 260.0
+offset_bottom = 125.0
+
+[node name="equippable3_label" type="Label" parent="shop_background/equippable3" unique_id=1531622202]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 60.0
+offset_right = 55.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0.008500225, 0.008297587, 0.006723451, 1)
+
+[node name="exit_panel" type="Panel" parent="shop_background" unique_id=1268725056]
+custom_minimum_size = Vector2(80, 80)
+offset_left = 654.28156
+offset_top = -466.3621
+offset_right = 734.28156
+offset_bottom = -386.3621
+theme_override_styles/panel = SubResource("StyleBoxFlat_t4u6q")
+
+[node name="exit_sprite" type="Sprite2D" parent="shop_background/exit_panel" unique_id=1772049657]
+position = Vector2(39.24088, 39.933125)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_jbbiy")
+
+[node name="exit_label" type="Label" parent="shop_background/exit_panel" unique_id=618797109]
+layout_mode = 0
+offset_left = 19.22002
+offset_top = 77.96468
+offset_right = 59.22002
+offset_bottom = 108.96468
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 22
+text = "Exit"
+
+[node name="sell_panel" type="Panel" parent="shop_background" unique_id=22971442]
+offset_left = 39.24088
+offset_top = 302.8264
+offset_right = 185.79355
+offset_bottom = 406.46243
+theme_override_styles/panel = SubResource("StyleBoxTexture_l06h2")
+
+[node name="sell_label" type="Label" parent="shop_background/sell_panel" unique_id=1534815166]
+layout_mode = 0
+offset_left = 48.850853
+offset_top = 31.376045
+offset_right = 95.85085
+offset_bottom = 70.376045
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 28
+text = "Sell"
+
+[node name="gold_panel" type="Panel" parent="shop_background" unique_id=799395297]
+custom_minimum_size = Vector2(40, 40)
+offset_left = 500.0
+offset_top = -440.0
+offset_right = 540.0
+offset_bottom = -400.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_rutho")
+
+[node name="gold_label" type="Label" parent="shop_background/gold_panel" unique_id=1787262811]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 2.0
+offset_right = 78.0
+offset_bottom = 25.0
+
+[node name="sell_background" type="Sprite2D" parent="shop_background" unique_id=1817028356]
+visible = false
+position = Vector2(-229.0386, -149.7493)
+texture = ExtResource("4_rutho")
+
+[node name="sell_exit_panel" type="Panel" parent="shop_background/sell_background" unique_id=942440996]
+custom_minimum_size = Vector2(45, 45)
+offset_left = -416.43378
+offset_top = -192.05942
+offset_right = -371.43378
+offset_bottom = -147.05942
+theme_override_styles/panel = SubResource("StyleBoxFlat_t4u6q")
+
+[node name="sell_exit_sprite" type="Sprite2D" parent="shop_background/sell_background/sell_exit_panel" unique_id=842775230]
+position = Vector2(20.54528, 22.680338)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("2_jbbiy")
+flip_h = true
+flip_v = true
+
+[node name="sell_exit_label" type="Label" parent="shop_background/sell_background/sell_exit_panel" unique_id=1664738363]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 40.745
+offset_right = 44.0
+offset_bottom = 63.745
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+text = "Close"
+
+[node name="sell_vbox" type="VBoxContainer" parent="shop_background/sell_background" unique_id=1336768475]
+custom_minimum_size = Vector2(0, 70)
+offset_left = -372.3879
+offset_top = -144.51997
+offset_right = -332.3879
+offset_bottom = -74.51997
+theme_override_constants/separation = 39
+
+[node name="sell_hbox1" type="HBoxContainer" parent="shop_background/sell_background/sell_vbox" unique_id=700946254]
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="sell1" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox1" unique_id=2134619203]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell1_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox1/sell1" unique_id=1911772283]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell2" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox1" unique_id=1098719798]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell2_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox1/sell2" unique_id=1682751804]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell3" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox1" unique_id=1991282580]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell3_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox1/sell3" unique_id=1101333912]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell4" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox1" unique_id=611423831]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell4_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox1/sell4" unique_id=869438755]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell5" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox1" unique_id=1414766716]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell5_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox1/sell5" unique_id=2125443875]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell6" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox1" unique_id=76709805]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell6_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox1/sell6" unique_id=1428663755]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell7" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox1" unique_id=986662808]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell7_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox1/sell7" unique_id=1660744933]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell8" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox1" unique_id=1166343664]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell8_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox1/sell8" unique_id=213991788]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell_hbox2" type="HBoxContainer" parent="shop_background/sell_background/sell_vbox" unique_id=613455435]
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="sell9" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox2" unique_id=482167575]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell9_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox2/sell9" unique_id=961096370]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell10" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox2" unique_id=856098557]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell10_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox2/sell10" unique_id=573998933]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell11" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox2" unique_id=45930886]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell11_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox2/sell11" unique_id=501978317]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell12" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox2" unique_id=431859569]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell12_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox2/sell12" unique_id=198395840]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell13" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox2" unique_id=1358076246]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell13_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox2/sell13" unique_id=1643289151]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell14" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox2" unique_id=179383494]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell14_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox2/sell14" unique_id=1632354090]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell15" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox2" unique_id=1083391338]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell15_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox2/sell15" unique_id=38039004]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell16" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox2" unique_id=893179253]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell16_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox2/sell16" unique_id=981273667]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell_hbox3" type="HBoxContainer" parent="shop_background/sell_background/sell_vbox" unique_id=509060200]
+layout_mode = 2
+theme_override_constants/separation = 26
+
+[node name="sell17" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox3" unique_id=1753998273]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell17_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox3/sell17" unique_id=653164606]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell18" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox3" unique_id=1285144570]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell18_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox3/sell18" unique_id=881375147]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell19" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox3" unique_id=893831446]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell19_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox3/sell19" unique_id=1836673952]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell20" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox3" unique_id=66798246]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell20_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox3/sell20" unique_id=1315155146]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell21" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox3" unique_id=1835964710]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell21_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox3/sell21" unique_id=2144526011]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell22" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox3" unique_id=1844922733]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell22_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox3/sell22" unique_id=1556329267]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell23" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox3" unique_id=1319088723]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell23_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox3/sell23" unique_id=562675195]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"
+
+[node name="sell24" type="Panel" parent="shop_background/sell_background/sell_vbox/sell_hbox3" unique_id=1861757547]
+custom_minimum_size = Vector2(70, 70)
+layout_mode = 2
+
+[node name="sell24_label" type="Label" parent="shop_background/sell_background/sell_vbox/sell_hbox3/sell24" unique_id=168092935]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 70.0
+offset_right = 55.0
+offset_bottom = 93.0
+text = "100g"

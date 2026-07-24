@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://cls4d7bwsv7ki"]
+
+[ext_resource type="Script" uid="uid://o6s02x4uwhi3" path="res://scripts/level_up_screen.gd" id="1_16lk3"]
+[ext_resource type="Texture2D" uid="uid://b8a8gkpyq3wqn" path="res://images/ui_art/levelup.png" id="1_tujht"]
+[ext_resource type="Texture2D" uid="uid://ws7y4w2bxv7y" path="res://images/ui_art/ability.png" id="3_5l1el"]
+[ext_resource type="Texture2D" uid="uid://dh8qm2ahnyq1n" path="res://images/ui_art/exit.png" id="4_502pc"]
+[ext_resource type="Texture2D" uid="uid://c7vrs1cngp6di" path="res://images/ui_art/woodbutton.png" id="4_qmtfy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_502pc"]
+texture = ExtResource("3_5l1el")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sr6tv"]
+texture = ExtResource("4_qmtfy")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qmtfy"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.4509804)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+
+[node name="LevelUpScreen" type="PopupPanel" unique_id=1778834993]
+oversampling_override = 1.0
+size = Vector2i(1920, 1080)
+visible = true
+script = ExtResource("1_16lk3")
+
+[node name="level_up_background" type="Sprite2D" parent="." unique_id=1409381921]
+position = Vector2(955, 543.00006)
+scale = Vector2(2.622549, 1.7663397)
+texture = ExtResource("1_tujht")
+
+[node name="health" type="Panel" parent="level_up_background" unique_id=1045044578]
+custom_minimum_size = Vector2(60, 50)
+offset_left = -120.0
+offset_top = -160.0
+offset_bottom = -70.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_502pc")
+
+[node name="health_label" type="Label" parent="level_up_background/health" unique_id=840302264]
+layout_mode = 0
+offset_left = 36.605606
+offset_top = 35.66698
+offset_right = 83.12523
+offset_bottom = 56.048115
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+theme_override_font_sizes/font_size = 14
+text = "Health"
+
+[node name="defense" type="Panel" parent="level_up_background" unique_id=1912163590]
+custom_minimum_size = Vector2(120, 90)
+offset_left = 8.0
+offset_top = -160.0
+offset_right = 128.0
+offset_bottom = -70.0
+tooltip_text = "Defense +1"
+theme_override_styles/panel = SubResource("StyleBoxTexture_502pc")
+
+[node name="defense_label" type="Label" parent="level_up_background/defense" unique_id=1001574216]
+layout_mode = 0
+offset_left = 32.7925
+offset_top = 35.666977
+offset_right = 88.792496
+offset_bottom = 55.666977
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+theme_override_font_sizes/font_size = 14
+text = "Defense"
+
+[node name="strength" type="Panel" parent="level_up_background" unique_id=719613350]
+custom_minimum_size = Vector2(60, 50)
+offset_left = -120.0
+offset_top = -40.0
+offset_bottom = 50.0
+tooltip_text = "Strength +1"
+theme_override_styles/panel = SubResource("StyleBoxTexture_502pc")
+
+[node name="strength_label" type="Label" parent="level_up_background/strength" unique_id=1280304967]
+layout_mode = 0
+offset_left = 32.029907
+offset_top = 36.23309
+offset_right = 91.02991
+offset_bottom = 56.614223
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+theme_override_font_sizes/font_size = 14
+text = "Strength"
+
+[node name="speed" type="Panel" parent="level_up_background" unique_id=1500685800]
+custom_minimum_size = Vector2(60, 50)
+offset_left = 8.0
+offset_top = -40.0
+offset_right = 128.0
+offset_bottom = 50.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_502pc")
+
+[node name="speed_label" type="Label" parent="level_up_background/speed" unique_id=2097775302]
+layout_mode = 0
+offset_left = 39.656075
+offset_top = 35.66696
+offset_right = 85.656075
+offset_bottom = 55.66696
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+theme_override_font_sizes/font_size = 14
+text = "Speed"
+
+[node name="learnability" type="Panel" parent="level_up_background" unique_id=1856944675]
+custom_minimum_size = Vector2(60, 50)
+offset_left = -120.0
+offset_top = 80.0
+offset_bottom = 170.0
+tooltip_text = "Select one of two presented abilities to add to your known abilities"
+theme_override_styles/panel = SubResource("StyleBoxTexture_502pc")
+
+[node name="learnability_label" type="Label" parent="level_up_background/learnability" unique_id=1333410230]
+layout_mode = 0
+offset_left = 38.893456
+offset_top = 24.34413
+offset_right = 85.41308
+offset_bottom = 67.34413
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+theme_override_font_sizes/font_size = 14
+text = "Learn
+Ability"
+
+[node name="confirm" type="Panel" parent="level_up_background" unique_id=1338768145]
+offset_left = 51.09532
+offset_top = 147.19702
+offset_right = 121.09532
+offset_bottom = 207.19702
+theme_override_styles/panel = SubResource("StyleBoxTexture_sr6tv")
+
+[node name="confirm_label" type="Label" parent="level_up_background/confirm" unique_id=858562390]
+layout_mode = 0
+offset_left = 8.007477
+offset_top = 19.248848
+offset_right = 64.059814
+offset_bottom = 42.248848
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 14
+text = "Confirm"
+
+[node name="exit" type="Panel" parent="level_up_background" unique_id=1255838168]
+offset_left = -110.19812
+offset_top = 186.827
+offset_right = -60.19812
+offset_bottom = 236.827
+scale = Vector2(0.4, 0.4)
+tooltip_text = "confirm your selection(s)"
+theme_override_styles/panel = SubResource("StyleBoxFlat_qmtfy")
+
+[node name="exit_icon" type="Sprite2D" parent="level_up_background/exit" unique_id=1404779556]
+position = Vector2(24.785053, 26.891771)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("4_502pc")
+flip_h = true
+
+[node name="exit_label" type="Label" parent="level_up_background/exit" unique_id=1927208216]
+layout_mode = 0
+offset_left = 20.97196
+offset_top = -24.061058
+offset_right = 49.971962
+offset_bottom = -1.061058
+tooltip_text = "Exit this menu"
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+text = "Exit"
+
+[node name="Label" type="Label" parent="level_up_background" unique_id=556666799]
+offset_left = -49.9514
+offset_top = -187.95934
+offset_right = 68.0486
+offset_bottom = -148.95934
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+theme_override_font_sizes/font_size = 28
+text = "Pick Two"

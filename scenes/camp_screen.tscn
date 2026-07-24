@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://371uqm3i4qev"]
+
+[ext_resource type="Texture2D" uid="uid://cq0pnrin4mri0" path="res://images/background_art/camp_scene.png" id="1_q8bhy"]
+[ext_resource type="Script" uid="uid://dtmicm7u1wpcn" path="res://scripts/camp_screen.gd" id="1_vdfcl"]
+[ext_resource type="PackedScene" uid="uid://dnb4oujood5oe" path="res://scenes/character_hud.tscn" id="3_3sicg"]
+
+[node name="Camp" type="Node2D" unique_id=287324930]
+script = ExtResource("1_vdfcl")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=752317333]
+position = Vector2(957.28015, 537.15784)
+scale = Vector2(1.5364103, 1.2952938)
+texture = ExtResource("1_q8bhy")
+
+[node name="CharacterHud" parent="." unique_id=1181757093 instance=ExtResource("3_3sicg")]
+position = Vector2(1, 0)

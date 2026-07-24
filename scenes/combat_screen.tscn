@@ -1,0 +1,134 @@
+[gd_scene format=3 uid="uid://kdi53c70laep"]
+
+[ext_resource type="Script" uid="uid://dkxolten6cllh" path="res://data/combat_manager.gd" id="1_uvqtf"]
+[ext_resource type="Script" uid="uid://dl1yv25eitqea" path="res://characters/thyros.gd" id="2_42k13"]
+[ext_resource type="Texture2D" uid="uid://bmf46flco5eek" path="res://images/character_art/Thyros_Sprite.png" id="2_mh10l"]
+[ext_resource type="PackedScene" uid="uid://dnb4oujood5oe" path="res://scenes/character_hud.tscn" id="2_ts8ml"]
+[ext_resource type="Script" uid="uid://crjbhfeimnf8e" path="res://enemies/Mugger.gd" id="3_ts8ml"]
+[ext_resource type="Script" uid="uid://blxxa4qa0xyim" path="res://characters/caela.gd" id="4_ts8ml"]
+[ext_resource type="Script" uid="uid://dr2162cq3t0yr" path="res://characters/valen.gd" id="5_pc4bt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0t75"]
+bg_color = Color(0.20720747, 0.6598682, 0.78787607, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kx3u1"]
+bg_color = Color(0.20784314, 0.65882355, 0.7882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga4lu"]
+bg_color = Color(0.9647059, 0.043137256, 0.45882353, 1)
+
+[node name="CombatUI" type="CanvasLayer" unique_id=1388770935]
+script = ExtResource("1_uvqtf")
+
+[node name="Background" type="Panel" parent="." unique_id=475689385]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterSprite" type="Sprite2D" parent="Background" unique_id=739533389]
+position = Vector2(581.5, 500)
+scale = Vector2(0.776, 0.62)
+texture = ExtResource("2_mh10l")
+flip_h = true
+
+[node name="CharacterHud" parent="." unique_id=1181757093 instance=ExtResource("2_ts8ml")]
+position = Vector2(2, 1)
+
+[node name="InitiativeBar" type="HBoxContainer" parent="." unique_id=1325092799]
+offset_left = 193.0
+offset_top = 172.0
+offset_right = 1723.0
+offset_bottom = 216.0
+alignment = 1
+
+[node name="MainUI" type="VBoxContainer" parent="." unique_id=1063191272]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 204.0
+offset_top = 651.0
+offset_right = -210.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterName" type="Label" parent="MainUI" unique_id=510734561]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+
+[node name="PlayerHealthLabel" type="Label" parent="MainUI" unique_id=2023212822]
+layout_mode = 2
+
+[node name="AP_Label" type="Label" parent="MainUI" unique_id=133460781]
+layout_mode = 2
+
+[node name="PlayerStatus" type="HBoxContainer" parent="MainUI" unique_id=2054902403]
+layout_mode = 2
+
+[node name="ActionButtons" type="HBoxContainer" parent="MainUI" unique_id=1035262097]
+layout_mode = 2
+
+[node name="Btn_Attack" type="Button" parent="MainUI/ActionButtons" unique_id=735429901]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0t75")
+
+[node name="Btn_Abilities" type="Button" parent="MainUI/ActionButtons" unique_id=507921258]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kx3u1")
+
+[node name="Btn_EndTurn" type="Button" parent="MainUI/ActionButtons" unique_id=481280477]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00011382764, 0.00011382824, 0.000113827795, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ga4lu")
+
+[node name="AbilitiesPanel" type="Panel" parent="MainUI" unique_id=1336870392]
+visible = false
+layout_mode = 2
+
+[node name="AbilityGrid" type="GridContainer" parent="MainUI/AbilitiesPanel" unique_id=2016635875]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="Btn_FlameLash" type="Button" parent="MainUI/AbilitiesPanel/AbilityGrid" unique_id=2094955128]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+text = "Flame Lash"
+
+[node name="Btn_SplitBlade" type="Button" parent="MainUI/AbilitiesPanel/AbilityGrid" unique_id=1768640544]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+text = "Split Blade"
+
+[node name="Thyros" type="Node" parent="." unique_id=533712948]
+script = ExtResource("2_42k13")
+
+[node name="Caela" type="Node" parent="." unique_id=1361319517]
+script = ExtResource("4_ts8ml")
+metadata/_custom_type_script = "uid://blxxa4qa0xyim"
+
+[node name="Valen" type="Node" parent="." unique_id=1949084167]
+script = ExtResource("5_pc4bt")
+metadata/_custom_type_script = "uid://dr2162cq3t0yr"
+
+[node name="BasicEnemy" type="Node" parent="." unique_id=581423107]
+script = ExtResource("3_ts8ml")
+
+[node name="EnemiesContainer" type="HBoxContainer" parent="." unique_id=525117883]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = 211.0
+offset_right = -210.0
+offset_bottom = 251.0
+grow_horizontal = 0
+grow_vertical = 2

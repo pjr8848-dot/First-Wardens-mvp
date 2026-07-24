@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://ciq38mhhsllha"]
+
+[ext_resource type="Texture2D" uid="uid://cjxcxtjva3s76" path="res://images/ui_art/abilities.png" id="1_ahfp5"]
+[ext_resource type="Script" uid="uid://bmxwq4i5e2u8y" path="res://scripts/learn_abilities_screen.gd" id="1_hog4b"]
+[ext_resource type="Texture2D" uid="uid://dh8qm2ahnyq1n" path="res://images/ui_art/exit.png" id="3_mov35"]
+[ext_resource type="Texture2D" uid="uid://ws7y4w2bxv7y" path="res://images/ui_art/ability.png" id="3_qt88o"]
+[ext_resource type="Texture2D" uid="uid://c7vrs1cngp6di" path="res://images/ui_art/woodbutton.png" id="4_6rol7"]
+[ext_resource type="Texture2D" uid="uid://dgeie6te2ppi4" path="res://images/ui_art/refresh.png" id="5_pief5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6oohk"]
+texture = ExtResource("3_qt88o")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yxnc3"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.4509804)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uddlp"]
+texture = ExtResource("4_6rol7")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_707tf"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.4509804)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="AddAbilitiesScreen" type="PopupPanel" unique_id=1662912690]
+oversampling_override = 1.0
+mode = 2
+initial_position = 1
+size = Vector2i(1920, 1080)
+visible = true
+script = ExtResource("1_hog4b")
+
+[node name="learn_ability_background" type="Sprite2D" parent="." unique_id=2044459563]
+position = Vector2(944.25006, 541.125)
+scale = Vector2(2.4975412, 2.0776284)
+texture = ExtResource("1_ahfp5")
+
+[node name="option1" type="Panel" parent="learn_ability_background" unique_id=68841579]
+layout_direction = 4
+offset_left = 41.941193
+offset_top = -50.59857
+offset_right = 201.9412
+offset_bottom = 49.40143
+theme_override_styles/panel = SubResource("StyleBoxTexture_6oohk")
+
+[node name="option1_label" type="Label" parent="learn_ability_background/option1" unique_id=84560953]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="option2" type="Panel" parent="learn_ability_background" unique_id=1635606097]
+custom_minimum_size = Vector2(160, 100)
+layout_direction = 4
+offset_left = -199.89664
+offset_top = -52.523827
+offset_right = -39.896637
+offset_bottom = 47.476173
+theme_override_styles/panel = SubResource("StyleBoxTexture_6oohk")
+
+[node name="option2_label" type="Label" parent="learn_ability_background/option2" unique_id=1832834396]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="exit" type="Panel" parent="learn_ability_background" unique_id=1495568822]
+custom_minimum_size = Vector2(50, 50)
+offset_left = -193.08994
+offset_top = -110.763306
+offset_right = -143.08994
+offset_bottom = -60.763306
+scale = Vector2(0.4, 0.4)
+tooltip_text = "Exit this menu"
+theme_override_styles/panel = SubResource("StyleBoxFlat_yxnc3")
+
+[node name="exit_icon" type="Sprite2D" parent="learn_ability_background/exit" unique_id=309439723]
+position = Vector2(25.02462, 26.472479)
+scale = Vector2(0.016, 0.016)
+texture = ExtResource("3_mov35")
+flip_h = true
+flip_v = true
+
+[node name="exit_label" type="Label" parent="learn_ability_background/exit" unique_id=1177243941]
+layout_mode = 0
+offset_left = 13.613339
+offset_top = 54.870255
+offset_right = 53.61334
+offset_bottom = 77.870255
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+text = "Exit"
+
+[node name="confirm" type="Panel" parent="learn_ability_background" unique_id=459312013]
+offset_left = 121.21919
+offset_top = 88.021034
+offset_right = 217.1562
+offset_bottom = 140.85185
+scale = Vector2(0.8, 0.8)
+tooltip_text = "confirm your selection"
+theme_override_styles/panel = SubResource("StyleBoxTexture_uddlp")
+
+[node name="confirm_label" type="Label" parent="learn_ability_background/confirm" unique_id=1200151308]
+layout_mode = 0
+offset_left = 13.2129965
+offset_top = 12.514269
+offset_right = 84.213
+offset_bottom = 38.51427
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 18
+text = "Confirm"
+
+[node name="refresh" type="Panel" parent="learn_ability_background" unique_id=199594198]
+custom_minimum_size = Vector2(50, 50)
+layout_direction = 4
+offset_left = -10.109976
+offset_top = -9.205213
+offset_right = 39.890022
+offset_bottom = 40.79479
+scale = Vector2(0.4, 0.4)
+theme_override_styles/panel = SubResource("StyleBoxFlat_707tf")
+
+[node name="refresh_icon" type="Sprite2D" parent="learn_ability_background/refresh" unique_id=706708292]
+position = Vector2(25.024586, 25.269222)
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("5_pief5")
+
+[node name="refresh_label" type="Label" parent="learn_ability_background/refresh" unique_id=520718822]
+layout_mode = 0
+offset_left = -25.0
+offset_top = 120.0
+offset_right = 15.0
+offset_bottom = 143.0
+scale = Vector2(2, 2)
+horizontal_alignment = 1

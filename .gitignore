@@ -1,0 +1,40 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+*.translation
+
+# Imported assets (Godot regenerates these)
+*.import
+
+# Export presets & builds
+export_presets.cfg
+*.apk
+*.aab
+*.ipa
+*.exe
+*.x86_64
+*.app
+*.dmg
+*.zip
+*.pck
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Optional: uncomment if you don't want to track large binary assets yet
+# *.png
+# *.jpg
+# *.jpeg
+# *.wav
+# *.ogg
+# *.mp3
+# *.ttf
+# *.otf

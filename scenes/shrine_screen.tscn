@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://cruscxrurkv0l"]
+
+[ext_resource type="Texture2D" uid="uid://cuhse7poyqk33" path="res://images/background_art/shrine.png" id="1_8854h"]
+[ext_resource type="Script" uid="uid://da7x16arvm5xn" path="res://scripts/shrine_screen.gd" id="1_gqpqc"]
+[ext_resource type="Texture2D" uid="uid://dh8qm2ahnyq1n" path="res://images/ui_art/exit.png" id="2_gqpqc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r22gx"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.4509804)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8854h"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="ShrineScreen" type="Node2D" unique_id=369658432]
+script = ExtResource("1_gqpqc")
+
+[node name="shrine_background" type="Sprite2D" parent="." unique_id=1792918286]
+position = Vector2(962, 539)
+scale = Vector2(1.3651925, 0.9634581)
+texture = ExtResource("1_8854h")
+
+[node name="exit_panel" type="Panel" parent="." unique_id=688576606]
+offset_left = 1721.0
+offset_top = 124.0
+offset_right = 1825.0
+offset_bottom = 224.0
+scale = Vector2(0.8, 0.8)
+theme_override_styles/panel = SubResource("StyleBoxFlat_r22gx")
+
+[node name="exit_sprite" type="Sprite2D" parent="exit_panel" unique_id=94888346]
+position = Vector2(52, 49)
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_gqpqc")
+
+[node name="exit_label" type="Label" parent="exit_panel" unique_id=80394042]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 100.0
+offset_right = 51.0
+offset_bottom = 123.0
+theme_override_colors/font_color = Color(0.9691369, 0.9691369, 0.9691368, 1)
+theme_override_font_sizes/font_size = 22
+text = "Exit"
+
+[node name="blessing1_panel" type="Panel" parent="." unique_id=914797729]
+offset_left = 422.0
+offset_top = 505.0
+offset_right = 502.0
+offset_bottom = 585.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8854h")
+
+[node name="blessing1_label" type="Label" parent="blessing1_panel" unique_id=565713191]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 82.0
+offset_right = 57.0
+offset_bottom = 105.0
+
+[node name="blessing2_panel" type="Panel" parent="." unique_id=2110938032]
+offset_left = 929.0
+offset_top = 424.0
+offset_right = 1009.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8854h")
+
+[node name="blessing2_label" type="Label" parent="blessing2_panel" unique_id=1585742249]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 80.0
+offset_right = 58.0
+offset_bottom = 103.0
+
+[node name="blessing3_panel" type="Panel" parent="." unique_id=1801467831]
+offset_left = 1422.0
+offset_top = 498.0
+offset_right = 1502.0
+offset_bottom = 578.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_8854h")
+
+[node name="blessing3_label" type="Label" parent="blessing3_panel" unique_id=1819478993]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 82.0
+offset_right = 58.0
+offset_bottom = 105.0

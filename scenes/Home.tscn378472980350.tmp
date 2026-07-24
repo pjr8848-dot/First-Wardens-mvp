@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://blwwutvgl2ojv"]
+
+[ext_resource type="Texture2D" uid="uid://bb22lbik7ota2" path="res://images/home.png" id="1_d52sk"]
+[ext_resource type="Script" uid="uid://dyfoeaus85mjo" path="res://scripts/home.gd" id="1_nqr1n"]
+[ext_resource type="Texture2D" uid="uid://bxf273oy1urv" path="res://images/Frame.png" id="2_nqr1n"]
+[ext_resource type="Script" uid="uid://dl1yv25eitqea" path="res://characters/thyros.gd" id="4_svoro"]
+[ext_resource type="Script" uid="uid://blxxa4qa0xyim" path="res://characters/caela.gd" id="5_72wqp"]
+[ext_resource type="Script" uid="uid://dr2162cq3t0yr" path="res://characters/valen.gd" id="6_yk4sq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svoro"]
+bg_color = Color(0.6313726, 0.4627451, 0.38039216, 0.60784316)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.80382496, 0.5163717, 0.38220918, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_72wqp"]
+bg_color = Color(0.31051657, 0.64567524, 0.7953962, 0.60784316)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.7137255, 0.8235294, 0.85882354, 0.60784316)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yk4sq"]
+bg_color = Color(0.34117648, 0.70980394, 0.3647059, 0.60784316)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.09212036, 0.31755283, 0.1586059, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Home" type="Node2D" unique_id=1394043007]
+script = ExtResource("1_nqr1n")
+
+[node name="Home" type="Sprite2D" parent="." unique_id=385488978]
+position = Vector2(965.5, 536)
+scale = Vector2(1.2572114, 0.96634614)
+texture = ExtResource("1_d52sk")
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=114716442]
+position = Vector2(962, 538.5)
+scale = Vector2(1.6404111, 1.3762757)
+texture = ExtResource("2_nqr1n")
+
+[node name="ThyrosButton" type="Panel" parent="." unique_id=1765749527]
+offset_left = 579.0
+offset_top = 792.0
+offset_right = 752.0
+offset_bottom = 837.0
+tooltip_text = "An aggressive swordsman with flame based abilities from his heritage"
+theme_override_styles/panel = SubResource("StyleBoxFlat_svoro")
+
+[node name="ThyrosLabel" type="Label" parent="ThyrosButton" unique_id=121366320]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 3.0
+offset_right = 149.0
+offset_bottom = 31.666656
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0.0142752165, 0.014275218, 0.014275218, 1)
+text = "Thyros"
+
+[node name="CaelaButton" type="Panel" parent="." unique_id=1347994443]
+offset_left = 935.0
+offset_top = 849.0
+offset_right = 1108.0
+offset_bottom = 894.0
+tooltip_text = "a patient, half-elf scholar who uses magic to outwit her foes"
+theme_override_styles/panel = SubResource("StyleBoxFlat_72wqp")
+
+[node name="CaelaLabel" type="Label" parent="CaelaButton" unique_id=1265253745]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 3.0
+offset_right = 101.666626
+offset_bottom = 29.0
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 18
+text = "Caela"
+
+[node name="ValenButton" type="Panel" parent="." unique_id=1620690920]
+offset_left = 1223.0
+offset_top = 791.0
+offset_right = 1396.0
+offset_bottom = 836.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yk4sq")
+
+[node name="ValenLabel" type="Label" parent="ValenButton" unique_id=1346053233]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 3.000061
+offset_right = 100.0
+offset_bottom = 29.000061
+scale = Vector2(1.5, 1.5)
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 18
+text = "Valen"
+
+[node name="Thyros" type="Node" parent="." unique_id=1268477626]
+script = ExtResource("4_svoro")
+metadata/_custom_type_script = "uid://dl1yv25eitqea"
+
+[node name="Caela" type="Node" parent="." unique_id=692861982]
+script = ExtResource("5_72wqp")
+metadata/_custom_type_script = "uid://blxxa4qa0xyim"
+
+[node name="Valen" type="Node" parent="." unique_id=382326436]
+script = ExtResource("6_yk4sq")
+metadata/_custom_type_script = "uid://dr2162cq3t0yr"

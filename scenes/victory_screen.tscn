@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dpm8abpejnic"]
+
+[ext_resource type="Script" uid="uid://damwvrt5j8wus" path="res://scripts/victory_screen.gd" id="1_pfcnd"]
+[ext_resource type="Texture2D" uid="uid://sqo2blbmr5ua" path="res://images/ui_art/victory.png" id="2_rixwf"]
+[ext_resource type="Texture2D" uid="uid://dh8qm2ahnyq1n" path="res://images/ui_art/exit.png" id="3_ll51u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_73dpb"]
+bg_color = Color(0.18039216, 0.12156863, 0.05882353, 0.4509804)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8509804, 0.6509804, 0.2509804, 1)
+border_blend = true
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="Victory" type="PopupPanel" unique_id=848608856]
+oversampling_override = 1.0
+size = Vector2i(1920, 1080)
+visible = true
+script = ExtResource("1_pfcnd")
+
+[node name="victory_background" type="Sprite2D" parent="." unique_id=909826714]
+position = Vector2(964, 535)
+texture = ExtResource("2_rixwf")
+
+[node name="exit" type="Panel" parent="victory_background" unique_id=1842504423]
+offset_left = 334.0
+offset_top = 179.0
+offset_right = 374.0
+offset_bottom = 219.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_73dpb")
+
+[node name="exit_icon" type="Sprite2D" parent="victory_background/exit" unique_id=1816008606]
+position = Vector2(20, 22)
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("3_ll51u")
+
+[node name="exit_label" type="Label" parent="victory_background/exit" unique_id=699301771]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 40.0
+offset_right = 45.0
+offset_bottom = 63.0
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+text = "Exit"
+
+[node name="rewards" type="VBoxContainer" parent="victory_background" unique_id=285340992]
+offset_left = -343.0
+offset_top = -77.0
+offset_right = -8.0
+offset_bottom = 187.0
+theme_override_constants/separation = 16
+
+[node name="xp_label" type="Label" parent="victory_background/rewards" unique_id=1998572684]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.0018410678, 0.0018410682, 0.0018410678, 1)
+theme_override_font_sizes/font_size = 24
+text = "XP earned:"
+
+[node name="gold_label" type="Label" parent="victory_background/rewards" unique_id=297021616]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.011087579, 0.011087578, 0.01108758, 1)
+theme_override_font_sizes/font_size = 24
+text = "Gold gained:"

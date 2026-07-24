@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d3ks432q7slrr"]
+
+[ext_resource type="Script" uid="uid://cest21s40a1qd" path="res://scripts/map_screen.gd" id="1_3lmvi"]
+[ext_resource type="Texture2D" uid="uid://dv4t6hjwwagei" path="res://images/map.png" id="2_bphxi"]
+
+[node name="MapScreen" type="Node2D" unique_id=799695035]
+position = Vector2(-1, 3)
+script = ExtResource("1_3lmvi")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1370730515]
+position = Vector2(575.5, 320)
+scale = Vector2(0.9558333, 0.9439528)
+texture = ExtResource("2_bphxi")

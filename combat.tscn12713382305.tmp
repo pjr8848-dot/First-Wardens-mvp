@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://kdi53c70laep"]
+
+[ext_resource type="Script" uid="uid://dkxolten6cllh" path="res://combat_manager.gd" id="1_s0t75"]
+[ext_resource type="Script" uid="uid://dl1yv25eitqea" path="res://thyros.gd" id="2_kx3u1"]
+[ext_resource type="Script" uid="uid://vektauv6j7jw" path="res://dummy_enemy.gd" id="3_kx3u1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s0t75"]
+bg_color = Color(0.20720747, 0.6598682, 0.78787607, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kx3u1"]
+bg_color = Color(0.20784314, 0.65882355, 0.7882353, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ga4lu"]
+bg_color = Color(0.9647059, 0.043137256, 0.45882353, 1)
+
+[node name="CombatUI" type="CanvasLayer" unique_id=1388770935]
+script = ExtResource("1_s0t75")
+
+[node name="Background" type="Panel" parent="." unique_id=475689385]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainUI" type="VBoxContainer" parent="." unique_id=1063191272]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 2.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterName" type="Label" parent="MainUI" unique_id=510734561]
+custom_minimum_size = Vector2(140, 0)
+layout_mode = 2
+
+[node name="PlayerHealthBar" type="ProgressBar" parent="MainUI" unique_id=1479371380]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="PlayerHealthLabel" type="Label" parent="MainUI" unique_id=2023212822]
+layout_mode = 2
+
+[node name="AP_Label" type="Label" parent="MainUI" unique_id=133460781]
+layout_mode = 2
+
+[node name="PlayerStatus" type="HBoxContainer" parent="MainUI" unique_id=2054902403]
+layout_mode = 2
+
+[node name="ActionButtons" type="HBoxContainer" parent="MainUI" unique_id=1035262097]
+layout_mode = 2
+
+[node name="Btn_Attack" type="Button" parent="MainUI/ActionButtons" unique_id=735429901]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_s0t75")
+text = "Basic Attack"
+
+[node name="Btn_Abilities" type="Button" parent="MainUI/ActionButtons" unique_id=507921258]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_kx3u1")
+text = "Abilities"
+
+[node name="Btn_EndTurn" type="Button" parent="MainUI/ActionButtons" unique_id=481280477]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.00011382764, 0.00011382824, 0.000113827795, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ga4lu")
+text = "End Turn"
+
+[node name="AbilitiesPanel" type="Panel" parent="MainUI" unique_id=1336870392]
+visible = false
+layout_mode = 2
+
+[node name="AbilityGrid" type="GridContainer" parent="MainUI/AbilitiesPanel" unique_id=2016635875]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+columns = 2
+
+[node name="Btn_FlameLash" type="Button" parent="MainUI/AbilitiesPanel/AbilityGrid" unique_id=2094955128]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+text = "Flame Lash"
+
+[node name="Btn_SplitBlade" type="Button" parent="MainUI/AbilitiesPanel/AbilityGrid" unique_id=1768640544]
+custom_minimum_size = Vector2(140, 50)
+layout_mode = 2
+text = "Split Blade"
+
+[node name="Thyros" type="Node" parent="." unique_id=533712948]
+script = ExtResource("2_kx3u1")
+
+[node name="DummyEnemy" type="Node" parent="." unique_id=581423107]
+script = ExtResource("3_kx3u1")
+
+[node name="EnemyPanel" type="VBoxContainer" parent="." unique_id=1748093701]
+visible = false
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 112.0
+grow_horizontal = 0
+
+[node name="EnemyName" type="Label" parent="EnemyPanel" unique_id=146976704]
+layout_mode = 2
+
+[node name="EnemyIntentLabel" type="Label" parent="EnemyPanel" unique_id=658177768]
+layout_mode = 2
+
+[node name="EnemyHealthBar" type="ProgressBar" parent="EnemyPanel" unique_id=816785962]
+layout_mode = 2
+
+[node name="EnemyHealthLabel" type="Label" parent="EnemyPanel" unique_id=1481084843]
+layout_mode = 2
+
+[node name="EnemyStatus" type="HBoxContainer" parent="EnemyPanel" unique_id=970305323]
+layout_mode = 2
+
+[node name="EnemiesContainer" type="HBoxContainer" parent="." unique_id=525117883]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0

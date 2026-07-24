@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://deknv8erfcpxh"]
+
+[ext_resource type="Texture2D" uid="uid://vqsr28dn34tx" path="res://images/ui_art/events.png" id="1_l0dx1"]
+[ext_resource type="Script" uid="uid://csv4dhrdjj6pj" path="res://scripts/events_popup.gd" id="1_o4w1y"]
+[ext_resource type="Texture2D" uid="uid://c7vrs1cngp6di" path="res://images/ui_art/woodbutton.png" id="2_e0ktv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o4w1y"]
+bg_color = Color(0.6, 0.6, 0.6, 0.39215687)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ep3q5"]
+bg_color = Color(0.6, 0.6, 0.6, 0.39215687)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o4w1y"]
+texture = ExtResource("2_e0ktv")
+
+[node name="EventsPopup" type="PopupPanel" unique_id=1457992346]
+oversampling_override = 1.0
+size = Vector2i(1920, 1080)
+visible = true
+script = ExtResource("1_o4w1y")
+
+[node name="events_background" type="Sprite2D" parent="." unique_id=825602770]
+position = Vector2(956.5, 538.5)
+scale = Vector2(1.6275685, 1.3635204)
+texture = ExtResource("1_l0dx1")
+
+[node name="event_text" type="Label" parent="events_background" unique_id=1046769009]
+offset_left = -482.62177
+offset_top = -291.52478
+offset_right = 152.68176
+offset_bottom = 155.11316
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 28
+text = "LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="option1" type="Panel" parent="events_background" unique_id=450942270]
+offset_left = 243.0
+offset_top = -331.0
+offset_right = 486.0
+offset_bottom = -31.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o4w1y")
+
+[node name="option1_text" type="Label" parent="events_background/option1" unique_id=1607153527]
+layout_mode = 0
+offset_right = 237.77802
+offset_bottom = 305.0926
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_font_sizes/font_size = 20
+text = "LOREM IPSOM LOREM IPSOM LOREM IPSOM LOREM IPSOM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="option2" type="Panel" parent="events_background" unique_id=367447116]
+offset_left = 243.0
+offset_top = 34.0
+offset_right = 486.0
+offset_bottom = 334.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ep3q5")
+
+[node name="option2_text" type="Label" parent="events_background/option2" unique_id=271598136]
+layout_mode = 0
+offset_right = 243.0
+offset_bottom = 300.0
+theme_override_colors/font_color = Color(0.0056611504, 0.0056611514, 0.00566115, 1)
+theme_override_font_sizes/font_size = 20
+text = "LOREM IPSOM LOREM IPSOM LOREM IPSOM"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="confirm" type="Panel" parent="events_background" unique_id=2121547900]
+offset_left = -258.36087
+offset_top = 153.6464
+offset_right = -35.328796
+offset_bottom = 278.32364
+theme_override_styles/panel = SubResource("StyleBoxTexture_o4w1y")
+
+[node name="confirm_label" type="Label" parent="events_background/confirm" unique_id=533054804]
+layout_mode = 0
+offset_right = 184.83606
+offset_bottom = 100.84189
+scale = Vector2(1.2, 1.2)
+theme_override_colors/font_color = Color(0.0035191667, 0.0035191681, 0.0035191672, 1)
+theme_override_font_sizes/font_size = 20
+text = "Confirm"
+horizontal_alignment = 1
+vertical_alignment = 1
