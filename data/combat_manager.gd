@@ -33,6 +33,10 @@ func _on_abilities_pressed():
 	abilities_panel.visible = not abilities_panel.visible
 	update_ui()
 
+func _on_ap_changed(_new_ap: int):
+	if ap_label:
+		ap_label.text = "Action Points: " + str(current_character.ap)
+
 func _on_end_turn_pressed():
 	# === REAL SPEED / INITIATIVE SYSTEM ===
 	# Give "ticks" to everyone based on their speed
@@ -190,6 +194,9 @@ func _ready():
 	print("CURRENT CHARACTER ", PlayerData.current_character.name)
 	
 	current_character = PlayerData.current_character
+	
+	if current_character.has_signal("ap_changed"):
+		current_character.ap_changed.connect(_on_ap_changed)
 	
 	await btn_basic_attack.pressed.connect(_on_basic_attack_pressed)
 	btn_abilities.pressed.connect(_on_abilities_pressed)

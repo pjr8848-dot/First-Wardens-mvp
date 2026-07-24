@@ -37,7 +37,7 @@ func aerus_blessing():
 	has_aerus_blessing = true
 	var bonus = int(PlayerData.base_speed * 0.1)
 	PlayerData.speed += bonus
-	print("Blessing of Aerus: +", bonus, " Speed (10% of base)")
+	print("Blessing of Aerus: +", bonus, " Speed (10% of base), after 3 combats, charges and let's you 'jump' from one path to any other path")
 
 func rixas_blessing():
 	var bonus = int(PlayerData.level * 2)
@@ -91,7 +91,10 @@ func use_consumable(item_id: String) -> bool:
 			return true
 		"energy_stone":
 			if PlayerData.is_in_combat:
-				PlayerData.current_character.ap += 3
+				if PlayerData.current_character.has_method("add_ap"):
+					PlayerData.current_character.add_ap(3)
+				else:
+					PlayerData.current_character.ap += 3
 				print("Gained 3 AP")
 			else:
 				was_not_consumed = true

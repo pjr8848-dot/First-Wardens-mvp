@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://blwwutvgl2ojv"]
 
-[ext_resource type="Texture2D" uid="uid://bb22lbik7ota2" path="res://images/background_art/home.png" id="1_d52sk"]
-[ext_resource type="Script" uid="uid://dyfoeaus85mjo" path="res://scripts/home.gd" id="1_nqr1n"]
-[ext_resource type="Texture2D" uid="uid://bxf273oy1urv" path="res://images/ui_art/Frame.png" id="2_nqr1n"]
-[ext_resource type="Texture2D" uid="uid://bmf46flco5eek" path="res://images/character_art/Thyros_Sprite.png" id="4_fs62j"]
-[ext_resource type="Script" uid="uid://dl1yv25eitqea" path="res://characters/thyros.gd" id="4_svoro"]
-[ext_resource type="Texture2D" uid="uid://dgabflx1c3qsv" path="res://images/character_art/Caela_Sprite.png" id="5_23ovu"]
-[ext_resource type="Script" uid="uid://blxxa4qa0xyim" path="res://characters/caela.gd" id="5_72wqp"]
-[ext_resource type="Script" uid="uid://dr2162cq3t0yr" path="res://characters/valen.gd" id="6_yk4sq"]
+[ext_resource type="Script" uid="uid://dyfoeaus85mjo" path="res://scripts/character_select.gd" id="1_bqp8h"]
+[ext_resource type="Texture2D" uid="uid://bb22lbik7ota2" path="res://images/background_art/home.png" id="2_5cdo8"]
+[ext_resource type="Texture2D" uid="uid://bxf273oy1urv" path="res://images/ui_art/Frame.png" id="3_pfxxa"]
+[ext_resource type="Texture2D" uid="uid://bmf46flco5eek" path="res://images/character_art/Thyros_Sprite.png" id="4_p44ra"]
+[ext_resource type="Texture2D" uid="uid://dgabflx1c3qsv" path="res://images/character_art/Caela_Sprite.png" id="5_fqvby"]
+[ext_resource type="Script" uid="uid://dl1yv25eitqea" path="res://characters/thyros.gd" id="6_0sghn"]
+[ext_resource type="Script" uid="uid://blxxa4qa0xyim" path="res://characters/caela.gd" id="7_yxv22"]
+[ext_resource type="Script" uid="uid://dr2162cq3t0yr" path="res://characters/valen.gd" id="8_qokh3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_svoro"]
 bg_color = Color(0.6313726, 0.4627451, 0.38039216, 0.60784316)
@@ -52,17 +52,17 @@ corner_radius_bottom_left = 12
 load_path = "res://.godot/imported/Valen_Sprite.png-18e578859fb96caa5029dfe1e0be379a.ctex"
 
 [node name="Home" type="Node2D" unique_id=1394043007]
-script = ExtResource("1_nqr1n")
+script = ExtResource("1_bqp8h")
 
 [node name="Home" type="Sprite2D" parent="." unique_id=385488978]
 position = Vector2(965.5, 536)
 scale = Vector2(1.2572114, 0.96634614)
-texture = ExtResource("1_d52sk")
+texture = ExtResource("2_5cdo8")
 
 [node name="Frame" type="Sprite2D" parent="." unique_id=114716442]
 position = Vector2(962, 538.5)
 scale = Vector2(1.6404111, 1.3762757)
-texture = ExtResource("2_nqr1n")
+texture = ExtResource("3_pfxxa")
 
 [node name="ThyrosButton" type="Panel" parent="." unique_id=1765749527]
 offset_left = 579.0
@@ -89,7 +89,7 @@ offset_top = -388.0
 offset_right = 186.00002
 offset_bottom = 224.0
 scale = Vector2(0.7352587, 0.6623382)
-texture = ExtResource("4_fs62j")
+texture = ExtResource("4_p44ra")
 
 [node name="CaelaButton" type="Panel" parent="." unique_id=1347994443]
 offset_left = 935.0
@@ -117,7 +117,7 @@ offset_top = -455.0
 offset_right = 220.99998
 offset_bottom = 211.0
 scale = Vector2(0.70866656, 0.6816817)
-texture = ExtResource("5_23ovu")
+texture = ExtResource("5_fqvby")
 
 [node name="ValenButton" type="Panel" parent="." unique_id=1620690920]
 offset_left = 1223.0
@@ -148,13 +148,13 @@ scale = Vector2(0.7352941, 0.7091503)
 texture = SubResource("CompressedTexture2D_p3505")
 
 [node name="Thyros" type="Node" parent="." unique_id=1268477626]
-script = ExtResource("4_svoro")
+script = ExtResource("6_0sghn")
 metadata/_custom_type_script = "uid://dl1yv25eitqea"
 
 [node name="Caela" type="Node" parent="." unique_id=692861982]
-script = ExtResource("5_72wqp")
+script = ExtResource("7_yxv22")
 metadata/_custom_type_script = "uid://blxxa4qa0xyim"
 
 [node name="Valen" type="Node" parent="." unique_id=382326436]
-script = ExtResource("6_yk4sq")
+script = ExtResource("8_qokh3")
 metadata/_custom_type_script = "uid://dr2162cq3t0yr"

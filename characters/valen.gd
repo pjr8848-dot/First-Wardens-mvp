@@ -61,6 +61,11 @@ func _on_before_damage_taken(incoming_damage: int):
 		return false
 
 func add_ap(amount: int):
+	if ap >= 9:
+		# Already at or over the soft cap — protect excess, don't add more, don't clamp down
+		emit_signal("ap_changed", ap)
+		return
+	
 	ap += amount
 	ap = min(9, ap)
 	emit_signal("ap_changed", ap)
