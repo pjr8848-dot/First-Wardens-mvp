@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="First Wardens"
-run/main_scene="uid://blwwutvgl2ojv"
+run/main_scene="uid://dq2r2rnteejx2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]

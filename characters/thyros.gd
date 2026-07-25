@@ -171,21 +171,19 @@ func lunging_strike(target) -> Variant:
 	emit_signal("ap_changed", ap)
 	
 	var damage = max(1, strength -3)
+	var cm = get_tree().get_first_node_in_group("combat_manager")
 	
-	if split_blade_active and target:
-		CombatManager.deal_damage(target, damage)
+	if split_blade_active and target and cm:
+		cm.deal_damage(target, damage)
 		_do_lunging_push()
-		
+	
 		if is_instance_valid(target) and target.current_health > 0:
-			CombatManager.deal_damage(target, damage)
 			_do_lunging_push()
-		
-		return true
+			print("LUNGING STRIKE! Dealt ", damage, " and surged forward!")
+			return damage
 	
 	_do_lunging_push()
-	
 	print("LUNGING STRIKE! Dealt ", damage, " and surged forward!")
-	
 	return damage
 
 func _do_lunging_push():
@@ -291,12 +289,10 @@ func get_starting_abilities() -> Array:
 			"description": "Flame Sweep, costs 4 AP. Deals " + str(strength) + " damage to a single target and applies 1 burn and 1 vulnerable (Vulnerable: target takes 1.5x damage while vulnerable, decays at start of next turn)"
 		},
 		{
-			"name": "Spinning Slash",
-			"cost": 2,
-			"function": "spinning_slash",
-			"cooldown_var": "spinning_slash_cooldown",
-			"aoe": true,
-			"description": "Spinning Slash, costs 2 AP, has a 1 turn Cooldown. Deal " + str(strength) + " damage to all enemies"
+			"name":"Lunging Strike",
+			"cost": 1,
+			"function": "lunging_strike",
+			"description": "Lunging Strike, costs 1 AP. Deal " + str(strength-3) + " damage and surge forward in initiative by 10%"
 		},
 	]
 

@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://dq2r2rnteejx2"]
+
+[ext_resource type="Script" uid="uid://dkf0iga2ceak6" path="res://scripts/main_menu.gd" id="1_8ln24"]
+[ext_resource type="Texture2D" uid="uid://bb22lbik7ota2" path="res://images/background_art/home.png" id="2_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://cjxcxtjva3s76" path="res://images/ui_art/abilities.png" id="2_wu84c"]
+[ext_resource type="Texture2D" uid="uid://bxf273oy1urv" path="res://images/ui_art/Frame.png" id="3_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://c7vrs1cngp6di" path="res://images/ui_art/woodbutton.png" id="3_8ln24"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rtw2f"]
+texture = ExtResource("3_8ln24")
+
+[node name="MainMenu" type="Node2D" unique_id=1887031695]
+script = ExtResource("1_8ln24")
+
+[node name="Home" type="Sprite2D" parent="." unique_id=1667891340]
+position = Vector2(965.5, 536)
+scale = Vector2(1.2572114, 0.96634614)
+texture = ExtResource("2_jk1qb")
+
+[node name="menu_scroll" type="Sprite2D" parent="Home" unique_id=243238878]
+self_modulate = Color(1, 1, 1, 0.6666667)
+position = Vector2(-16.30591, 18.626852)
+rotation = 1.5707964
+scale = Vector2(1.1433586, 1.2531466)
+texture = ExtResource("2_wu84c")
+
+[node name="start_game_panel" type="Panel" parent="Home/menu_scroll" unique_id=620146777]
+self_modulate = Color(1, 1, 1, 0.88235295)
+offset_left = -149.33745
+offset_top = 55.22162
+offset_right = -49.33745
+offset_bottom = 125.22162
+rotation = -1.5707964
+theme_override_styles/panel = SubResource("StyleBoxTexture_rtw2f")
+
+[node name="start_game_label" type="Label" parent="Home/menu_scroll/start_game_panel" unique_id=1338746390]
+layout_mode = 0
+offset_left = 13.329356
+offset_top = 25.342115
+offset_right = 90.32935
+offset_bottom = 48.342117
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 14
+text = "Start Game"
+
+[node name="codex_panel" type="Panel" parent="Home/menu_scroll" unique_id=622985184]
+self_modulate = Color(1, 1, 1, 0.88235295)
+offset_left = -50.68421
+offset_top = 54.586884
+offset_right = 49.31579
+offset_bottom = 124.58688
+rotation = -1.5707964
+theme_override_styles/panel = SubResource("StyleBoxTexture_rtw2f")
+
+[node name="codex_label" type="Label" parent="Home/menu_scroll/codex_panel" unique_id=1962975168]
+layout_mode = 0
+offset_left = 26.02398
+offset_top = 27.152267
+offset_right = 103.02398
+offset_bottom = 70.15227
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 14
+text = "Codex
+"
+
+[node name="exit_game_panel" type="Panel" parent="Home/menu_scroll" unique_id=93152697]
+self_modulate = Color(1, 1, 1, 0.88235295)
+offset_left = 54.30455
+offset_top = 54.58688
+offset_right = 154.30455
+offset_bottom = 124.58688
+rotation = -1.5707964
+theme_override_styles/panel = SubResource("StyleBoxTexture_rtw2f")
+
+[node name="exit_game_label" type="Label" parent="Home/menu_scroll/exit_game_panel" unique_id=1921125686]
+layout_mode = 0
+offset_left = 13.329356
+offset_top = 25.342115
+offset_right = 90.32935
+offset_bottom = 48.342117
+theme_override_colors/font_color = Color(0.008202022, 0.008202025, 0.008202025, 1)
+theme_override_font_sizes/font_size = 14
+text = "Exit Game"
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=1539846938]
+position = Vector2(962, 538.5)
+scale = Vector2(1.6404111, 1.3762757)
+texture = ExtResource("3_5dd4i")
